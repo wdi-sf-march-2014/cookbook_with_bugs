@@ -5,11 +5,11 @@ class RecipesController < ApplicationController
   before_filter :check_recipe_owner, only: [:edit, :update, :destroy]
 
   def index
-    @recipes = recipe.all
+    @recipes = Recipe.all
   end
 
   def new
-    #@recipe = Recipe.new
+    @recipe = Recipe.new
   end
 
   def create
