@@ -5,7 +5,7 @@ module SessionsHelper
 
   # signs in supplied user, called from SessionController
   def sign_in(user)
-    cookies.permanent[:remember_token] = user.remember_token
+    cookies[:remember_token] = { value: user.remember_token, expires: 14.days.from_now }
     # current_user is avilable in controllers and views!
     # This is an is an assignment, which we must define - see below
     # note that next line is a call to setter 'def current_user=(user)' below
