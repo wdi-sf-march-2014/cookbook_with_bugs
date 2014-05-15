@@ -4,8 +4,6 @@
   </li>
 </ul>
 
-<!-- TODO: do I need this? <%= @recipe = recipe  >
-
 <% @recipes.each do |recipe| %>
   <div class="row">
      <div class="col-md-4 col-sm-4">
@@ -16,7 +14,7 @@
       <p><%= recipe.instructions %>
     </div>
      <div class="col-md-8 col-sm-8">
-      <p><%= image_tag(recipe.image) %>
+      <%= image_tag(recipe.image) %>
     </div>
   </div>
 <% end %>
