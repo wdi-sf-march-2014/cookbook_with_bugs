@@ -1,4 +1,4 @@
-class UsersController < ActionController
+class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
@@ -20,15 +20,9 @@ class UsersController < ActionController
     end
   end
 
-  def update
-    @user = User.find(params[:id])
-    @user.update_attributes(user_params)
-    redirect_to @user
-  end
-
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end
 

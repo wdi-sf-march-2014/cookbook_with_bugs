@@ -5,16 +5,16 @@ class RecipesController < ApplicationController
   before_filter :check_recipe_owner, only: [:edit, :update, :destroy]
 
   def index
-    @recipes = recipe.all
+    @recipes = Recipe.all
   end
 
   def new
-    #@recipe = Recipe.new
+    @recipe = Recipe.new
   end
 
   def create
     recipe = Recipe.create recipe_params
-    redirect_to(recipe)
+    redirect_to recipe
   end
 
   def show
@@ -29,13 +29,13 @@ class RecipesController < ApplicationController
   def update
     recipe = Recipe.find(params[:id])
     recipe.update_attributes recipe_params
-    redirect_to(recipe)
+    redirect_to recipe
   end
 
   def destroy
     recipe = Recipe.find(params[:id])
     recipe.delete
-    redirect_to(recipes_path)
+    redirect_to recipes_path
   end
 
   private

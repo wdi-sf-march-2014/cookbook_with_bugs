@@ -11,7 +11,7 @@ Remember rails conventions.  Names matter, pluralizaton matters, and inheritence
 
 ### Add Token Expiration to the Auth
 
-Once you get the app up and running, add authentication that expires in some period of time (say 2 weeks).  In other words, if I'm User A, and I sign into the applicaiton, my remember token should not be valid 2 weeks from the time I first signed in.
+Once you get the app up and running, add authentication that expires in some period of time (say 2 weeks).  In other words, if I'm User A, and I sign into the application, my remember token should not be valid 2 weeks from the time I first signed in.
 
 #### Hints
 

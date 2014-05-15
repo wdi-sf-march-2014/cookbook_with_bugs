@@ -16,17 +16,14 @@
 
   <%= render 'layouts/header' %>
     <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <%flash.each do|key,value|%>
-                <div class="alert alert-<%=key%>"> <%=value%> </div>
+      <div class="col-xs-12">
+        <%flash.each do |key,value| %>
+        <p>"alert alert-<%=key%>> <%=value%>"</p>
         <%end%>
-
-
-
-
-
       </div>
-    </div>
+
+        <%= yield %>
+
 </div>
 
 </body>
